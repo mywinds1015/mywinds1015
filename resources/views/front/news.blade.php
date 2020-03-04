@@ -3,12 +3,13 @@
 
 
 @section('content')
+
 <section class="engine"><a href="https://mobirise.info/x">css templates</a></section><section class="features3 cid-rRF3umTBWU" id="features3-7">
 
 
 
 
-    <div class="container">
+    <div class="container pt-5 mt-5">
         <div class="media-container-row">
 
             @foreach ($news_data as $item)
@@ -35,7 +36,7 @@
                         </div>
                     </div>
 
-                    
+
             @endforeach
 
 
