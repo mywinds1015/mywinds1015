@@ -25,10 +25,13 @@ Route::group(['middleware' => ['auth'],'prefix'=>'/home'], function () {
         //首頁
         Route::get('/', 'HomeController@index');
 
-        //最新消息管理
+        //最新消息管理-後台
         Route::get('/news', 'NewsController@index');
+        Route::get('/news/create', 'NewsController@create');//儲存
         Route::post('/news/store', 'NewsController@store');
-        Route::post('/news/update', 'NewsController@edit');
+
+        Route::get('/news/edit/{id}', 'NewsController@edit'); //編輯文章
+        Route::post('/news/update/{id}', 'NewsController@update');//更新某篇文章
         Route::post('/news/delete', 'NewsController@delete');
 
 
