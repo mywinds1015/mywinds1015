@@ -13,6 +13,8 @@
 
 // use Illuminate\Routing\Route;
 
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 Route::get('/', 'FrontController@index');
 
 Route::get('/news', 'FrontController@news');
@@ -22,17 +24,21 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth'],'prefix'=>'/home'], function () {
 
-        //首頁
+        // 首頁
+
         Route::get('/', 'HomeController@index');
 
-        //最新消息管理-後台
-        Route::get('/news', 'NewsController@index');
-        Route::get('/news/create', 'NewsController@create');//儲存
-        Route::post('/news/store', 'NewsController@store');
+        Route::resource('news','NewsController');
 
-        Route::get('/news/edit/{id}', 'NewsController@edit'); //編輯文章
-        Route::post('/news/update/{id}', 'NewsController@update');//更新某篇文章
-        Route::post('/news/delete', 'NewsController@delete');
+
+        //最新消息管理-後台
+        // Route::get('/news', 'NewsController@index');
+        // Route::get('/news/create', 'NewsController@create');//儲存
+        // Route::post('/news/store', 'NewsController@store');
+
+        // Route::get('/news/edit/{id}', 'NewsController@edit'); //編輯文章
+        // Route::post('/news/update/{id}', 'NewsController@update');//更新某篇文章
+        // Route::post('/news/delete', 'NewsController@delete');
 
 
 });

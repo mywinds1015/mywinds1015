@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeNewsTitle extends Migration
+class CreateNewsImg extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class ChangeNewsTitle extends Migration
      */
     public function up()
     {
-        Schema::table('news',function($table){
-            $table->string('title')->default("TEST")->change();
+        Schema::create('news_img', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('img');
+            $table->string('news_id');
+            $table->integer('sort')->default(0);
+            $table->timestamps();
         });
     }
 
@@ -25,6 +29,6 @@ class ChangeNewsTitle extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('news_img');
     }
 }

@@ -18,6 +18,7 @@ class CreateNews extends Migration
             $table->string('img');
             $table->string('title')->default('TEST TITLE');
             $table->string('content')->nullable();
+            $table->integer('sort')->default(0);
             $table->timestamps();
         });
     }
