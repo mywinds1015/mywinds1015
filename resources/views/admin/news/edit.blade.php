@@ -4,8 +4,11 @@
 
 <div class="container">
     <h1>編輯最新消息</h1>
-<form method="POST" action="/home/news" enctype="multipart/form-data">
+<form method="POST" action="/home/news/{{$news->id}}" >
     @csrf
+    @method('PUT')
+
+
 
     <div class="form-group">
         <label for="img">主要圖片</label>

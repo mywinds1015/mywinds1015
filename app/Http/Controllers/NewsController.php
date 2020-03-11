@@ -89,8 +89,13 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        return view('admin/news/edit');
+        //$news = News::where('id','=',$id)->first();
+
+        $news = News::find($id);
+
+        return view('admin/news/edit',compact('news'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -101,7 +106,19 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        // $news = News::find($id);
+        // $news ->img = $request->img;
+        // $news ->title = $request->title;
+        // $news ->content = $request->content;
+
+        // $news->save();
+
+        News::find($id)->update($request->all());
+
+
+        return redirect('/home/news');
+
     }
 
     /**
@@ -112,8 +129,11 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::fine($id)->destroy();
+        return view('admin/news');
     }
+
+
     private function fileUpload($file,$dir){
         //防呆：資料夾不存在時將會自動建立資料夾，避免錯誤
         if( ! is_dir('upload/')){

@@ -24,13 +24,16 @@
           @foreach ($all_news as $item)
             <tr>
                 <td>
-                   <img style="width:300px;" src="{{$item->img}}" alt="">
+                   <img style="width:200px;" src="{{$item->img}}" alt="">
                 </td>
                 <td>{{$item->title}}</td>
                 <td>{{$item->content}}</td>
                 <td>
                     <a href="/home/news/{{$item->id}}/edit" class="btn btn-success btn-sm">修改</a>
-                    <button class="btn btn-danger btn-sm">刪除</button>
+                    <button class="btn btn-danger btn-sm" onclick="show_confirm({{$item->id}})">刪除</button>
+                    <form id="delete-form-{{$item->id}}" action="/home/news/delete/{{$item->id}}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </td>
 
             </tr>
@@ -47,9 +50,21 @@
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 <script>
-$(document).ready(function() {
-    $('#example').DataTable();
-} );</script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+
+        function show_confirm(id)
+        {
+            var r=confirm("你確定要刪除嗎？");
+            if (r==true)
+            {
+                //使用者確認刪除
+                document.getElementById('delete-from'+id).submit();
+            }
+
+        }
+</script>
 
 
 
