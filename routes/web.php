@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth'],'prefix'=>'/home'], function () {
 
         Route::get('/', 'HomeController@index');
 
-        
+
        //最新消息管理-後台
         Route::resource('news','NewsController');
 
@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth'],'prefix'=>'/home'], function () {
 
         // Route::get('/news/edit/{id}', 'NewsController@edit'); //編輯文章
         // Route::post('/news/update/{id}', 'NewsController@update');//更新某篇文章
-        // Route::post('/news/delete', 'NewsController@delete');
+        // Route::post('/news/delete/{id}', 'NewsController@destr');
 
 
 });

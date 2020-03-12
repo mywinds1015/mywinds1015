@@ -16,6 +16,7 @@ class NewsController extends Controller
      */
     public function index()
     {
+
         $all_news = News::all();
         // dd(News::all());
         return view('admin/news/index',compact('all_news'));
@@ -45,7 +46,9 @@ class NewsController extends Controller
 
         // 單一筆圖片上傳
         if($request->hasFile('img')){
-            $file = $request -> file('img');  //$request是物件,我們要找物件的img
+            //上傳檔案
+            $file = $request -> file('img'); //$request是物件,我們要找物件的img
+            
             $path = $this ->fileUpload($file,'news');
 
             $requestData['img'] = $path;
@@ -129,8 +132,9 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        News::fine($id)->destroy();
-        return view('admin/news');
+
+        News::find($id)->delete();
+        return redirect('/home/news');
     }
 
 

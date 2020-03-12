@@ -23,6 +23,10 @@
     <input type="text" class="form-control" id="title" name="title" required>
   </div>
   <div class="form-group">
+    <label for="sort">Sort</label>
+    <input type="number" min='0'class="form-control" id="sort" name="sort" required>
+  </div>
+  <div class="form-group">
     <label for="content">Content</label>
     <input type="text" class="form-control" id="content"  name="content" required>
   </div>

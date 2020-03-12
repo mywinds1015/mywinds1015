@@ -9,7 +9,7 @@ class News extends Model
       protected $table = 'news';
 
       protected $fillable = [
-          'img','title','content',
+          'img','title','content','sore',
       ];
 
       public function news_img(){

@@ -15,6 +15,7 @@
             <tr>
                 <th>img</th>
                 <th>title</th>
+                <th>sort</th>
                 <th>content</th>
                 <th></th>
 
@@ -24,22 +25,22 @@
           @foreach ($all_news as $item)
             <tr>
                 <td>
-                   <img style="width:200px;" src="{{$item->img}}" alt="">
+                   <img width="100" src="{{$item->img}}" alt="">
                 </td>
                 <td>{{$item->title}}</td>
+                <td>{{$item->sort}}</td>
                 <td>{{$item->content}}</td>
                 <td>
                     <a href="/home/news/{{$item->id}}/edit" class="btn btn-success btn-sm">修改</a>
                     <button class="btn btn-danger btn-sm" onclick="show_confirm({{$item->id}})">刪除</button>
-                    <form id="delete-form-{{$item->id}}" action="/home/news/delete/{{$item->id}}" method="POST" style="display: none;">
+                    <form id="delete-form-{{$item->id}}" action="/home/news/{{$item->id}}" method="POST" style="display: none;">
                         @csrf
+                        @method('DELETE')
                     </form>
                 </td>
 
             </tr>
-     @endforeach
-
-
+         @endforeach
         </tbody>
     </table>
 </div>
@@ -51,16 +52,23 @@
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#example').DataTable({
+                $('#example').dataTable( {
+                "order": [[ 2, 'asc' ]]} )
+        });
         } );
 
         function show_confirm(id)
         {
+
             var r=confirm("你確定要刪除嗎？");
+
             if (r==true)
             {
                 //使用者確認刪除
-                document.getElementById('delete-from'+id).submit();
+
+                document.getElementById('delete-form-'+id).submit();
+
             }
 
         }
