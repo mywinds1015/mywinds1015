@@ -6,7 +6,7 @@
     <h1>新增最新消息</h1>
 <form method="POST" action="/home/news" enctype="multipart/form-data">
     @csrf
-
+   
     <div class="form-group">
         <label for="img">主要圖片</label>
         <input type="file" class="form-control" id="img" name="img" required>

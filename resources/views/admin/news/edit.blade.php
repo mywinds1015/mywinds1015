@@ -4,15 +4,18 @@
 
 <div class="container">
     <h1>編輯最新消息</h1>
-<form method="POST" action="/home/news/{{$news->id}}" >
+<form method="POST" action="/home/news/{{$news->id}}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
 
-
     <div class="form-group">
-        <label for="img">主要圖片</label>
-        <input type="file" class="form-control" id="img" name="img" required>
+        <label for="img">現有圖片</label>
+        <img class="img-fluid "width="250" src="{{$news->img}}" alt="" required>
+      </div>
+    <div class="form-group">
+        <label for="img">重新上傳圖片</label>
+        <input type="file" class="form-control" id="img" name="img">
       </div>
       <div class="form-group">
         <label for="imges">內文圖片</label>
@@ -24,7 +27,7 @@
   </div>
   <div class="form-group">
     <label for="sort">Sort</label>
-    <input type="number" min='0'class="form-control" id="sort" name="sort" required>
+    <input type="number" min="0" class="form-control" id="sort" name="sort" required>
   </div>
   <div class="form-group">
     <label for="content">Content</label>

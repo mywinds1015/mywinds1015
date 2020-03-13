@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\DB;
 use App\News;
+
 use App\News_img;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+
 class NewsController extends Controller
 {
     /**
@@ -45,11 +47,11 @@ class NewsController extends Controller
 
 
         // 單一筆圖片上傳
-        if($request->hasFile('img')){
-            //上傳檔案
+        if($request->hasFile('img')){//是否有這張圖
+
             $file = $request -> file('img'); //$request是物件,我們要找物件的img
-            
-            $path = $this ->fileUpload($file,'news');
+
+            $path = $this ->fileUpload($file,'news');//到外面this找到檔案存進news的資料庫裡
 
             $requestData['img'] = $path;
         }
@@ -57,16 +59,16 @@ class NewsController extends Controller
             $news = News::create($requestData);
 
         // 多張圖片上傳
-        foreach($requestData['imges'] as $item){
-            if($request->hasFile('imges')){
-                $file = $item;
-                $path = $this ->fileUpload($file,'news');
-                $manyimg = new News_img;
-                $manyimg->img = $path;
-                $manyimg->news_id = $news->id;
-                $manyimg->save();
-            }
-        }
+        // foreach($requestData['imges'] as $item){
+        //     if($request->hasFile('imges')){
+        //         $file = $item;
+        //         $path = $this ->fileUpload($file,'news');
+        //         $manyimg = new News_img;
+        //         $manyimg->img = $path;
+        //         $manyimg->news_id = $news->id;
+        //         $manyimg->save();
+        //     }
+        // }
 
 
         return redirect('/home/news');
@@ -96,6 +98,8 @@ class NewsController extends Controller
 
         $news = News::find($id);
 
+
+
         return view('admin/news/edit',compact('news'));
     }
 
@@ -116,10 +120,24 @@ class NewsController extends Controller
         // $news ->content = $request->content;
 
         // $news->save();
+        $require_data = $request->all();
+        $item = News::find($id);
+        // News::find($id)->update($request->all());
 
-        News::find($id)->update($request->all());
+        //if有上傳新的照片
+        if($request->hasFile('img')) {
+            //刪除舊有圖片
 
+            $old_image = $item->img;
+            File::delete(public_path().$old_image);
 
+            //上傳新的圖片
+            $file = $request->file('img');
+            $path = $this->fileUpload($file,'news');
+            $request_data['img'] = $path;
+
+        }
+        $item->update($request_data);
         return redirect('/home/news');
 
     }
@@ -134,6 +152,7 @@ class NewsController extends Controller
     {
 
         News::find($id)->delete();
+
         return redirect('/home/news');
     }
 
