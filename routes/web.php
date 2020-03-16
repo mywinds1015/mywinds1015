@@ -19,6 +19,10 @@ Route::get('/', 'FrontController@index');
 
 Route::get('/news', 'FrontController@news');
 
+Route::get('/contactUs', 'FrontController@contactUs');
+
+Route::post('/contactUs/store','FrontController@contactUs_store');
+
 Auth::routes();
 
 

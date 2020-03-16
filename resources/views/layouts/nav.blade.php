@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{asset('assets/tether/tether.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/theme/css/style.css')}}">
   <link rel="stylesheet" href="{{asset('assets/gallery/style.css')}}">
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="preload" as="style" href="{{asset('assets/mobirise/css/mbr-additional.css')}}"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
 
 
@@ -58,6 +58,12 @@
                     <a class="nav-link link text-white display-4" href="/">
                         <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
                         Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="/contactUs">
+                        <span class="mbr-iconfont mbr-iconfont-btn"></span>
+                        聯絡我們
                     </a>
                 </li>
                 <li class="nav-item">
