@@ -14,7 +14,7 @@
         <img class="img-fluid "width="250" src="{{$news->img}}" alt="" required>
       </div>
     <div class="form-group">
-        <label for="img">重新上傳圖片</label>
+        <label for="img">重新上傳圖片（建議圖片尺寸16:9)</label>
         <input type="file" class="form-control" id="img" name="img">
       </div>
       <div class="form-group">
@@ -26,7 +26,7 @@
     <input type="text" class="form-control" id="title" name="title" required>
   </div>
   <div class="form-group">
-    <label for="sort">Sort</label>
+    <label for="sort">權重（數字越大排在最前面）</label>
     <input type="number" min="0" class="form-control" id="sort" name="sort" required>
   </div>
   <div class="form-group">
@@ -41,3 +41,4 @@
 
 
 @endsection
+
