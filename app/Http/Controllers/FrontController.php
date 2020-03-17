@@ -25,7 +25,7 @@ class FrontController extends Controller
     public function contactUs_store(Request $request){
         $user_data = $request->all();
         $content = contactUs::create($user_data);
-        Mail::to('mywinds10151205@gmail.com')->send(new OrderShipped($content));
+        Mail::to('mywinds-b2d1c9@inbox.mailtrap.io')->send(new OrderShipped($content));
         return redirect('/contactUs');
     }
 
