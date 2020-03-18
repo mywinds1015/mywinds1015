@@ -1,0 +1,348 @@
+body {
+  margin: 0;
+}
+.root {
+  // width: 100vw;
+  // height: 90vh;
+
+  background-color: rgb(25, 25, 25);
+  overflow: hidden;
+}
+
+.Introduction {
+  width: 80%;
+  height: 800px;
+  //   background-color: blue;
+  margin: 0 auto;
+  .inner {
+    width: 100%;
+    height: 90%;
+    // background-color: paleturquoise;
+    margin: 145px 0 45px;
+    .content-sc {
+      width: 40%;
+      height: 80%;
+      // background-color: papayawhip;
+      margin: 0 auto;
+      .title-sc {
+        height: 30%;
+        font-size: 64px;
+        line-height: 80px;
+        color: rgb(79, 229, 255);
+      }
+      .media-sc {
+        margin: 100px 0 30px 0;
+      }
+      p {
+        color: white;
+      }
+    }
+    .media-sc {
+      width: 60%;
+      height: 80%;
+      background-image: url(../img/icon-fluent@1x.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      text-align: center;
+      left: 100px;
+    }
+  }
+}
+.Platforms {
+  width: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vh;
+    height: 100%;
+    background-color: rgb(34, 128, 200);
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vh;
+    height: 100%;
+    background-color: rgb(95, 207, 99);
+    z-index: 1;
+  }
+  .inner-p {
+    width: 80%;
+    margin: 0 auto;
+    .card {
+      width: 25%;
+      height: 384px;
+      z-index: 5;
+    }
+    .card-title {
+      flex: 1;
+      padding: 26px;
+    }
+    .card-A {
+      background-color: rgb(37, 142, 222);
+    }
+    .card-B {
+      background-color: rgb(79, 229, 255);
+    }
+    .card-C {
+      background-color: rgb(207, 143, 255);
+    }
+    .card-D {
+      background-color: rgb(105, 229, 110);
+    }
+    h2 {
+      padding: 50px 50px 20px 30px;
+    }
+  }
+}
+.EveryDevice {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../img/msft-verge-fluent.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  .inner-E {
+    // position: relative;
+    padding: 10px 10px 0 16px;
+    h2 {
+      font-size: 96px;
+      line-height: 120px;
+    }
+  }
+}
+.Terraform-S {
+  width: 100%;
+  margin: 0 auto;
+  .inner-T {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    .rect {
+      position: absolute;
+      top: -200px;
+      right: 130px;
+    }
+    .line {
+      position: absolute;
+      top: 570px;
+      left: 190px;
+    }
+    .sphere {
+      padding: 60px 30px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.Terraform-D {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  .inner-D {
+    color: white;
+    .content-D {
+      margin: 0px 0px 50px;
+      font-size: 14px;
+      font-weight: 400px;
+      text-align: left;
+      word-break: normal;
+      position: absolute;
+      top: 10px;
+      right: 150px;
+    }
+  }
+}
+.Intuieive {
+  width: 100vw;
+  // height: 50vh;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  .titile-I {
+    width: 100px;
+    color: rgb(25, 25, 25);
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    .inner-I {
+      width: 600px;
+      h2 {
+        font-size: 96px;
+        line-height: 120px;
+      }
+    }
+  }
+}
+.Clouds {
+  width: 100%;
+  height: 90vh;
+  background-image: url(../img/clouds.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  background-attachment: fixed;
+  .inner-C {
+    width: 100%;
+    
+    .img_a {
+      position: absolute;
+      top: -250px;
+      right: -10px;
+    }
+    h2 {
+      font-size: 300px;
+      font-weight: 400;
+    }
+    #h2 {
+      position: absolute;
+      top: 200px;
+      right: 150px;
+    }
+  }
+}
+.Engaging {
+  width: 100%;
+  height: 80vh;
+  background-color: rgb(204, 204, 204);
+  position: relative;
+  .inner-En {
+    width: 1536px;
+    min-height: 860px;
+    margin: 0px auto;
+  }
+  .title-En {
+    padding: 140px 40px 0px 8px;
+  }
+  h2 {
+    font-size: 100px;
+    font-weight: 400;
+  }
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px;
+  }
+  .media-En {
+    width: 50%;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: 5;
+    img {
+      width: 100%;
+    }
+  }
+}
+.Space {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/space.jpg);
+  background-attachment: fixed;
+  position: relative;
+  .inner-S {
+    width: 1536px;
+    position: absolute;
+    top: -100px;
+    left: 30%;
+  }
+}
+.Media {
+  width: 100%;
+  margin-bottom: 160px;
+  .inner-M {
+    width: 1536px;
+    margin: 0 auto;
+    .grid {
+      width: 100%;
+      display: flex;
+      position: relative;
+      .grid-A {
+        width: 25%;
+        height: 384px;
+        background-color: rgb(0, 0, 0);
+      }
+      .grid-B {
+        width: 25%;
+        height: 384px;
+        background-color: rgb(57, 57, 57);
+      }
+      .grid-C {
+        width: 25%;
+        height: 384px;
+        background-color: rgb(118, 118, 118);
+      }
+      .grid-D {
+        width: 25%;
+        height: 384px;
+        background-color: rgb(204, 204, 204);
+      }
+      .grid-up {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        padding: 16px;
+      }
+      .grid-down {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+.News {
+  width: 100%;
+  .inner-N {
+   max-width: 1536px;
+   width: 100%;
+    margin: 0px auto;
+    .newslist {
+      width: 100%;
+      .newsitem {
+        width: 100%;
+        display: flex;
+        padding: 0px 0px 200px;
+        .title-N {
+          width: 50%;
+          h2 {
+            font-size: 32px;
+            line-height: 40px;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            padding: 0px 0px 0px 16px;
+          }
+        }
+        .content-N {
+          width: 50%;
+          color: rgb(255, 255, 255);
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.inner-F {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  .logo-F{
+    width: 20%;
+  }
+  .nav-F{
+    width: 50%;
+
+  }
+  .social-F{
+    width: 20%;
+  }
+}

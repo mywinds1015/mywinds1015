@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+}
+
+.root {
+  background-color: #191919;
+  overflow: hidden;
+}
+
+.Introduction {
+  width: 80%;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.Introduction .inner {
+  width: 100%;
+  height: 90%;
+  margin: 145px 0 45px;
+}
+
+.Introduction .inner .content-sc {
+  width: 40%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.Introduction .inner .content-sc .title-sc {
+  height: 30%;
+  font-size: 64px;
+  line-height: 80px;
+  color: #4fe5ff;
+}
+
+.Introduction .inner .content-sc .media-sc {
+  margin: 100px 0 30px 0;
+}
+
+.Introduction .inner .content-sc p {
+  color: white;
+}
+
+.Introduction .inner .media-sc {
+  width: 60%;
+  height: 80%;
+  background-image: url(../img/icon-fluent@1x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  left: 100px;
+}
+
+.Platforms {
+  width: 100%;
+  position: relative;
+}
+
+.Platforms::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vh;
+  height: 100%;
+  background-color: #2280c8;
+  z-index: 1;
+}
+
+.Platforms::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vh;
+  height: 100%;
+  background-color: #5fcf63;
+  z-index: 1;
+}
+
+.Platforms .inner-p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Platforms .inner-p .card {
+  width: 25%;
+  height: 384px;
+  z-index: 5;
+}
+
+.Platforms .inner-p .card-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 26px;
+}
+
+.Platforms .inner-p .card-A {
+  background-color: #258ede;
+}
+
+.Platforms .inner-p .card-B {
+  background-color: #4fe5ff;
+}
+
+.Platforms .inner-p .card-C {
+  background-color: #cf8fff;
+}
+
+.Platforms .inner-p .card-D {
+  background-color: #69e56e;
+}
+
+.Platforms .inner-p h2 {
+  padding: 50px 50px 20px 30px;
+}
+
+.EveryDevice {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../img/msft-verge-fluent.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.EveryDevice .inner-E {
+  padding: 10px 10px 0 16px;
+}
+
+.EveryDevice .inner-E h2 {
+  font-size: 96px;
+  line-height: 120px;
+}
+
+.Terraform-S {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Terraform-S .inner-T {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.Terraform-S .inner-T .rect {
+  position: absolute;
+  top: -200px;
+  right: 130px;
+}
+
+.Terraform-S .inner-T .line {
+  position: absolute;
+  top: 570px;
+  left: 190px;
+}
+
+.Terraform-S .inner-T .sphere {
+  padding: 60px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Terraform-D {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+
+.Terraform-D .inner-D {
+  color: white;
+}
+
+.Terraform-D .inner-D .content-D {
+  margin: 0px 0px 50px;
+  font-size: 14px;
+  font-weight: 400px;
+  text-align: left;
+  word-break: normal;
+  position: absolute;
+  top: 10px;
+  right: 150px;
+}
+
+.Intuieive {
+  width: 100vw;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+}
+
+.Intuieive .titile-I {
+  width: 100px;
+  color: #191919;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+}
+
+.Intuieive .titile-I .inner-I {
+  width: 600px;
+}
+
+.Intuieive .titile-I .inner-I h2 {
+  font-size: 96px;
+  line-height: 120px;
+}
+
+.Clouds {
+  width: 100%;
+  height: 90vh;
+  background-image: url(../img/clouds.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.Clouds .inner-C {
+  width: 100%;
+}
+
+.Clouds .inner-C .img_a {
+  position: absolute;
+  top: -250px;
+  right: -10px;
+}
+
+.Clouds .inner-C h2 {
+  font-size: 300px;
+  font-weight: 400;
+}
+
+.Clouds .inner-C #h2 {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+}
+
+.Engaging {
+  width: 100%;
+  height: 80vh;
+  background-color: #cccccc;
+  position: relative;
+}
+
+.Engaging .inner-En {
+  width: 1536px;
+  min-height: 860px;
+  margin: 0px auto;
+}
+
+.Engaging .title-En {
+  padding: 140px 40px 0px 8px;
+}
+
+.Engaging h2 {
+  font-size: 100px;
+  font-weight: 400;
+}
+
+.Engaging p {
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.Engaging .media-En {
+  width: 50%;
+  position: absolute;
+  top: 200px;
+  right: 0;
+  z-index: 5;
+}
+
+.Engaging .media-En img {
+  width: 100%;
+}
+
+.Space {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/space.jpg);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.Space .inner-S {
+  width: 1536px;
+  position: absolute;
+  top: -100px;
+  left: 30%;
+}
+
+.Media {
+  width: 100%;
+  margin-bottom: 160px;
+}
+
+.Media .inner-M {
+  width: 1536px;
+  margin: 0 auto;
+}
+
+.Media .inner-M .grid {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.Media .inner-M .grid .grid-A {
+  width: 25%;
+  height: 384px;
+  background-color: black;
+}
+
+.Media .inner-M .grid .grid-B {
+  width: 25%;
+  height: 384px;
+  background-color: #393939;
+}
+
+.Media .inner-M .grid .grid-C {
+  width: 25%;
+  height: 384px;
+  background-color: #767676;
+}
+
+.Media .inner-M .grid .grid-D {
+  width: 25%;
+  height: 384px;
+  background-color: #cccccc;
+}
+
+.Media .inner-M .grid .grid-up {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  color: white;
+  padding: 16px;
+}
+
+.Media .inner-M .grid .grid-down {
+  color: white;
+}
+
+.News {
+  width: 100%;
+}
+
+.News .inner-N {
+  max-width: 1536px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.News .inner-N .newslist {
+  width: 100%;
+}
+
+.News .inner-N .newslist .newsitem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 0px 200px;
+}
+
+.News .inner-N .newslist .newsitem .title-N {
+  width: 50%;
+}
+
+.News .inner-N .newslist .newsitem .title-N h2 {
+  font-size: 32px;
+  line-height: 40px;
+  color: white;
+  font-weight: 600;
+  padding: 0px 0px 0px 16px;
+}
+
+.News .inner-N .newslist .newsitem .content-N {
+  width: 50%;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.inner-F {
+  width: 100%;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inner-F .logo-F {
+  width: 20%;
+}
+
+.inner-F .nav-F {
+  width: 50%;
+}
+
+.inner-F .social-F {
+  width: 20%;
+}
+/*# sourceMappingURL=style.css.map */
