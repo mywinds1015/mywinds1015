@@ -13,7 +13,7 @@ class CreateNewsImg extends Migration
      */
     public function up()
     {
-        Schema::create('news_img', function (Blueprint $table) {
+        Schema::create('news_imgs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('img');
             $table->string('news_id');
@@ -29,6 +29,6 @@ class CreateNewsImg extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_img');
+        Schema::dropIfExists('news_imgs');
     }
 }

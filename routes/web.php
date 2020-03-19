@@ -14,10 +14,14 @@
 // use Illuminate\Routing\Route;
 
 // use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+
 Route::get('/', 'FrontController@index');
 
-Route::get('/news', 'FrontController@news');
+Route::get('/news', 'FrontController@news');//List page
+Route::get('/news/{id}', 'FrontController@news_detail');//Content Page
 
 Route::get('/contactUs', 'FrontController@contactUs');
 

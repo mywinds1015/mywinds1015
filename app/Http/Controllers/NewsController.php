@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\News;
 
 use App\News_img;
+use App\NewsImgs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -58,17 +59,18 @@ class NewsController extends Controller
 
             $news = News::create($requestData);
 
-        // 多張圖片上傳
-        // foreach($requestData['imges'] as $item){
-        //     if($request->hasFile('imges')){
-        //         $file = $item;
-        //         $path = $this ->fileUpload($file,'news');
-        //         $manyimg = new News_img;
-        //         $manyimg->img = $path;
-        //         $manyimg->news_id = $news->id;
-        //         $manyimg->save();
-        //     }
-        // }
+        //多張圖片上傳
+
+        foreach($requestData['imges'] as $item){
+            if($request->hasFile('imges')){
+                $file = $item;
+                $path = $this ->fileUpload($file,'news');
+                $manyimg = new NewsImgs;
+                $manyimg->img = $path;
+                $manyimg->news_id = $news->id;
+                $manyimg->save();
+            }
+        }
 
 
         return redirect('/home/news');
